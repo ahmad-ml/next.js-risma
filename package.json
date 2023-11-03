@@ -1,7 +1,7 @@
 {
-	"name": "maskulino-theme",
-	"version": "1.0.0",
-	"description": "Iluxi ReactJs Profile and Portfolio Theme",
+	"name": "ahmad-portfolio",
+	"version": "1.1.0",
+	"description": "Ahmad portfolio",
 	"keywords": [
 		"profile",
 		"portfolio",
@@ -9,8 +9,8 @@
 		"personal",
 		"showcase"
 	],
-	"author": "Iluxi Theme",
-	"license": "Envato",
+	"author": "Ahmad",
+	"license": "Nifty IT Solution LTD",
 	"main": "index.js",
 	"private": true,
 	"scripts": {

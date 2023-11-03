@@ -1,97 +1,90 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
-import Head from 'next/head';
-import { makeStyles } from 'tss-react/mui';
-import CssBaseline from '@mui/material/CssBaseline';
-import useMediaQuery from '@mui/material/useMediaQuery';
+import CssBaseline from "@mui/material/CssBaseline";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import Head from "next/head";
+import PropTypes from "prop-types";
+import React, { Fragment } from "react";
+import { makeStyles } from "tss-react/mui";
 // Use this below for Server Side Render/Translation (SSR)
 // import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 // Use this below for Static Site Generation (SSG)
-import { getStaticPaths, makeStaticProps } from '~/lib/getStatic';
-import brand from '~/public/text/brand';
-import Header from '~/components/Header';
-import BannerNav from '~/components/BannerNav';
-import About from '~/components/About';
-import Timeline from '~/components/Timeline';
-import Counter from '~/components/Counter';
-import Services from '~/components/Services';
-import Gallery from '~/components/Gallery';
-import Testimonials from '~/components/Testimonials';
-import Blog from '~/components/Blog';
-import Footer from '~/components/Footer';
-import PageNav from '~/components/PageNav';
-import Decoration from '~/components/Parallax/Decoration';
-import Notification from '~/components/Notification';
+import About from "~/components/About";
+import BannerNav from "~/components/BannerNav";
+import Blog from "~/components/Blog";
+import Counter from "~/components/Counter";
+import Footer from "~/components/Footer";
+import Header from "~/components/Header";
+import Notification from "~/components/Notification";
+import PageNav from "~/components/PageNav";
+import Decoration from "~/components/Parallax/Decoration";
+import Services from "~/components/Services";
+import Timeline from "~/components/Timeline";
+import { getStaticPaths, makeStaticProps } from "~/lib/getStatic";
+import brand from "~/public/text/brand";
 
-const sectionMargin = margin => (margin * 20);
-const useStyles = makeStyles({ uniqId: 'home' })(theme => ({
+const sectionMargin = (margin) => margin * 20;
+const useStyles = makeStyles({ uniqId: "home" })((theme) => ({
   mainWrap: {
-    position: 'relative',
-    width: '100%',
-    overflow: 'hidden',
-    background: theme.palette.mode === 'dark' ? theme.palette.background.dark : theme.palette.background.paper,
+    position: "relative",
+    width: "100%",
+    overflow: "hidden",
+    background:
+      theme.palette.mode === "dark"
+        ? theme.palette.background.dark
+        : theme.palette.background.paper,
   },
   greyBg: {
-    paddingTop: theme.spacing(10)
+    paddingTop: theme.spacing(10),
   },
   spaceBottom: {
     marginBottom: sectionMargin(6),
-    [theme.breakpoints.down('md')]: {
-      marginBottom: theme.spacing(10)
-    }
+    [theme.breakpoints.down("md")]: {
+      marginBottom: theme.spacing(10),
+    },
   },
   spaceBottomShort: {
-    marginBottom: theme.spacing(10)
+    marginBottom: theme.spacing(10),
   },
   spaceTop: {
     marginTop: sectionMargin(6),
-    [theme.breakpoints.down('md')]: {
-      marginTop: sectionMargin(3)
-    }
+    [theme.breakpoints.down("md")]: {
+      marginTop: sectionMargin(3),
+    },
   },
   spaceTopShort: {
-    marginTop: theme.spacing(10)
+    marginTop: theme.spacing(10),
   },
   containerWrap: {
     marginTop: -40,
-    '& > section': {
-      position: 'relative'
-    }
+    "& > section": {
+      position: "relative",
+    },
   },
   parallaxWrap: {
-    position: 'relative'
+    position: "relative",
   },
   bottomDeco: {
     top: -200,
-    position: 'absolute',
-    width: '100%',
-    height: 'calc(100% + 200px)'
-  }
+    position: "absolute",
+    width: "100%",
+    height: "calc(100% + 200px)",
+  },
 }));
 
 function Landing(props) {
   const { classes, cx } = useStyles();
   const { onToggleDark, onToggleDir } = props;
-  const isTablet = useMediaQuery(theme => theme.breakpoints.down('lg'));
+  const isTablet = useMediaQuery((theme) => theme.breakpoints.down("lg"));
 
   return (
     <React.Fragment>
       <Head>
-        <title>
-          { brand.maskulino.name + ' - Profile' }
-        </title>
+        <title>{brand.maskulino.name + " - Profile"}</title>
       </Head>
       <CssBaseline />
       <div className={classes.mainWrap}>
-        <Header
-          onToggleDark={onToggleDark}
-          onToggleDir={onToggleDir}
-        />
+        <Header onToggleDark={onToggleDark} onToggleDir={onToggleDir} />
         <section id="home">
-          <BannerNav
-            onToggleDark={onToggleDark}
-            onToggleDir={onToggleDir}
-          />
+          <BannerNav onToggleDark={onToggleDark} onToggleDir={onToggleDir} />
         </section>
         <section id="about">
           <About />
@@ -104,12 +97,15 @@ function Landing(props) {
             <section id="services">
               <Services />
             </section>
-            <section id="my-work" className={cx(classes.spaceTopShort, classes.spaceBottomShort)}>
-              <Gallery />
+            <section
+              id="my-work"
+              className={cx(classes.spaceTopShort, classes.spaceBottomShort)}
+            >
+              {/* <Gallery /> */}
             </section>
           </div>
           <section id="testimonials">
-            <Testimonials />
+            {/* <Testimonials /> */}
           </section>
           <div className={classes.parallaxWrap}>
             <div className={classes.bottomDeco}>

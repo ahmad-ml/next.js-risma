@@ -2,19 +2,20 @@ import imgAPI from '~/public/images/imgAPI';
 
 const brand = {
   maskulino: {
-    name: 'John Doe',
-    title: 'Photographer',
-    desc: 'Iluxi Profile - React Single Landing Page Template',
-    prefix: 'Iluxi',
-    footerText: 'Iluxi Theme 2022',
-    logoText: 'Iluxi Profile',
-    projectName: 'Profile',
-    url: 'iluxireact.ux-maestro.com/profile',
-    img: '/images/maskulino-logo.png',
-    avatar: imgAPI.maskulino[0],
+    name: "Ahmad Syed Anwar",
+    title: "CTO at Nifty IT Solutions Ltd.",
+    desc: "Project manager, web developer, and designer",
+    prefix: "Mr.",
+    footerText: "Ahmad @ 2023",
+    logoText: "Ahmad",
+    projectName: "Portfolio",
+    url: "https://www.linkedin.com/in/coolhead/",
+    img: "/images/maskulino-logo.png",
+    avatar: "/images/avatars/avatar.jpg",
     cover: imgAPI.maskulino[1],
-    notifMsg: 'Donec sit amet nulla sed arcu pulvinar ultricies commodo id ligula.'
-  }
+    notifMsg:
+      "Donec sit amet nulla sed arcu pulvinar ultricies commodo id ligula.",
+  },
 };
 
 export default brand;
